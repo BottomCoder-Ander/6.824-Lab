@@ -34,6 +34,7 @@ func Map(filename string, contents string) []mr.KeyValue {
 	return kva
 }
 
+// 1/2的概率crash
 func Reduce(key string, values []string) string {
 	maybeCrash()
 

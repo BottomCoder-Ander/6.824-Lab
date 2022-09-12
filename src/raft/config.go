@@ -40,7 +40,7 @@ type config struct {
 	mu        sync.Mutex
 	t         *testing.T
 	net       *labrpc.Network
-	n         int
+	n         int // 节点数
 	rafts     []*Raft
 	applyErr  []string // from apply channel readers
 	connected []bool   // whether each server is on the net
@@ -59,7 +59,9 @@ type config struct {
 
 var ncpu_once sync.Once
 
+// 创建config
 func make_config(t *testing.T, n int, unreliable bool, snapshot bool) *config {
+	// 初始化种子，保证只初始化一次
 	ncpu_once.Do(func() {
 		if runtime.NumCPU() < 2 {
 			fmt.Printf("warning: only one CPU, which may conceal locking bugs\n")

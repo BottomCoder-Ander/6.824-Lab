@@ -17,14 +17,17 @@ import "fmt"
 import "log"
 
 func main() {
-	if len(os.Args) != 2 {
-		fmt.Fprintf(os.Stderr, "Usage: mrworker xxx.so\n")
+	// 增加一個workerId的參數
+	if len(os.Args) != 3 {
+		fmt.Fprintf(os.Stderr, "[mrWorker]: Usage: mrworker xxx.so workerId\n")
 		os.Exit(1)
 	}
 
 	mapf, reducef := loadPlugin(os.Args[1])
+	workerId := os.Args[2]
+	fmt.Printf("[mrWorker]: worker %s started!\n", workerId)
 
-	mr.Worker(mapf, reducef)
+	mr.Worker(mapf, reducef, workerId)
 }
 
 //

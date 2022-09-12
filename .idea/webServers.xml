@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3defac4e-08cc-48f9-aae8-c9842396c174" name="tencent yun">
+        <fileTransfer rootFolder="/home/ander" accessType="SFTP" host="43.138.129.175" port="22" sshConfigId="5f7ade99-4131-45c6-a197-7942da651f9f" sshConfig="ander@43.138.129.175:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

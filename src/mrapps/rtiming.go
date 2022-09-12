@@ -30,6 +30,7 @@ func nparallel(phase string) int {
 	if err != nil {
 		panic(err)
 	}
+
 	names, err := dd.Readdirnames(1000000)
 	if err != nil {
 		panic(err)
@@ -50,7 +51,6 @@ func nparallel(phase string) int {
 	dd.Close()
 
 	time.Sleep(1 * time.Second)
-
 	err = os.Remove(myfilename)
 	if err != nil {
 		panic(err)

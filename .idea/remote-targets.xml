@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteTargetsManager">
+    <targets>
+      <target name="ander@43.138.129.175:22" type="ssh/sftp" uuid="a37060f7-a416-41a8-b68b-77cd7984b0f0">
+        <config>
+          <option name="projectRootOnTarget" value="/home/ander/6.824" />
+          <option name="serverName" value="ander@43.138.129.175:22 password" />
+        </config>
+        <ContributedStateBase type="GoLanguageRuntime">
+          <config>
+            <option name="goPath" value="/home/ander/development/code/go" />
+            <option name="goRoot" value="/usr/local/go/bin/go" />
+            <option name="goVersion" value="go1.19 linux/amd64" />
+          </config>
+        </ContributedStateBase>
+      </target>
+    </targets>
+  </component>
+</project>
